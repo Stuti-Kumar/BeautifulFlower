@@ -1,12 +1,7 @@
-name: Target Workflow
+name: Test through code
 
 on:
-  repository_dispatch:
-     types: [my_event_type]
-  
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,4 +13,4 @@ jobs:
 
       - name: Confirmation
         run: |
-          echo  "I am here"
+          echo  "I am here at a local branch"
